@@ -31,7 +31,7 @@ def home_page():
             # return redirect(url_for('market_page'))
             session["message"] = json.dumps(attempted_user.id)
             flash('Please enter Authentication Code to enjoy Buy And Sell Marketplace!', category='success')
-            # return redirect(url_for('market_page'))
+
             return redirect(url_for('qr_logincode'))
         else:
             flash('Username and password are not match! Please try again', category='danger')
@@ -90,7 +90,7 @@ def register_page():
         # flash(f"Account created successfully! You are now logged in as {user_to_create.username}", category='success')
         session['userid'] = json.dumps(user_to_create.id)
 
-        # return redirect(url_for('market_page'))
+        
         return redirect(url_for('qr_registrationcode'))
     if form.errors != {}: #If there are not errors from the validations
         for err_msg in form.errors.values():
