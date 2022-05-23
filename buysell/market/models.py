@@ -47,7 +47,7 @@ class User(db.Model, UserMixin):
 
 class Item(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
-    name = db.Column(db.String(length=30), nullable=False, unique=True)
+    name = db.Column(db.String(length=30), nullable=False)
     description = db.Column(db.String(length=1024), nullable=False)
     price = db.Column(db.Integer(), nullable=False)
     pickup_address = db.Column(db.String(length=1024), nullable=False)
@@ -74,11 +74,11 @@ class Request(db.Model):
     buyer_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
     seller_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
     buyer_name = db.Column(db.String(length=1024), nullable=False)
-    seller_id = db.Column(db.Integer(), db.ForeignKey('user.id'))                    
-    status= db.Column(db.Integer(),nullable=False) 
-    
+    status= db.Column(db.Integer(),nullable=False)
+
 class Auth(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     customer_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
     auth_code = db.Column(db.String())
     
+

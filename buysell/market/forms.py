@@ -2,7 +2,7 @@ from traceback import print_exc
 from unicodedata import name
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, HiddenField
-from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError
+from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError,NumberRange
 from market.models import User
 
 
