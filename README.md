@@ -1,4 +1,4 @@
-# buysell
+# Buy & Sell
 The Buy And Sell App is a marketplace to purchase and sell items
 
 Provides easy End to End flow from item listing to transaction completion
@@ -9,7 +9,7 @@ Seller can choose the buyer and vice versa without any spamming
 
 
 
-Technology Stack
+**Technology Stack**
 
 Front end ( HTML 5, CSS, Java Script, Bootstrap)
 
@@ -20,7 +20,7 @@ Frameworks ( Flask, Jinja 2 )
 Database ( SQLite)
 
 
-Salient Features:
+**Salient Features:**
 
 New Buyer/Seller Registration with MFA 
 
@@ -32,7 +32,7 @@ Separate View for Complete/In Progress Transactions
 
 
 
-Security Features:
+**Security Features:**
 
 MFA on each login
 
